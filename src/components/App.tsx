@@ -1,71 +1,107 @@
-import Avatar from 'components/Avatar'
-import logo from 'assets/logo.svg'
+import { useState } from 'react'
+import { useForm, SubmitHandler } from 'react-hook-form'
 
-const randoms = [
-  [1, 2],
-  [3, 4, 5],
-  [6, 7]
-]
+type Inputs = {
+  windDirection: number
+  windSpeed: number
+  trueAirSpeed: number
+}
 
-function App() {
+type Direction = {
+  groundSpeed: number
+  correctionAngle: number
+}
+
+type Directions = 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW' | 'N'
+
+export default function App() {
+  const [windAccounted, setWindAccounted] =
+    useState<Record<Directions, Direction>>()
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors }
+  } = useForm<Inputs>()
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    const updated: Record<Directions, Direction> = {
+      N: { groundSpeed: 100, correctionAngle: -5 },
+      NE: { groundSpeed: 100, correctionAngle: -5 },
+      E: { groundSpeed: 100, correctionAngle: -5 },
+      SE: { groundSpeed: 100, correctionAngle: -5 },
+      S: { groundSpeed: 100, correctionAngle: -5 },
+      SW: { groundSpeed: 100, correctionAngle: -5 },
+      W: { groundSpeed: 100, correctionAngle: -5 },
+      NW: { groundSpeed: 100, correctionAngle: -5 }
+    }
+
+    setWindAccounted(updated)
+  }
+
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="h-screen sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
-        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-          <div className="sm:max-w-lg">
-            <div className="my-4">
-              <Avatar size="large" src={logo} />
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Welcome!
-            </h1>
-            <p className="mt-4 text-xl text-gray-500">
-              This is a boilerplate build with Vite, React 18, TypeScript,
-              Vitest, Testing Library, TailwindCSS 3, Eslint and Prettier.
-            </p>
-          </div>
-          <div>
-            <div className="my-10">
-              <a
-                href="vscode://"
-                className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-offset-2"
-              >
-                Start building for free
-              </a>
-              <div
-                aria-hidden="true"
-                className="pointer-events-none mt-10 md:mt-0 lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
-              >
-                <div className="absolute sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                  <div className="flex items-center space-x-6 lg:space-x-8">
-                    {randoms.map((random, number) => (
-                      <div
-                        key={`random-${random[number]}`}
-                        className="grid shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8"
-                      >
-                        {random.map((number) => (
-                          <div
-                            key={`random-${number}`}
-                            className="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100"
-                          >
-                            <img
-                              src={`https://picsum.photos/600?random=${number}`}
-                              alt=""
-                              className="size-full bg-indigo-100 object-cover object-center"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="border flex flex-col p-4"
+      >
+        <label>True Airspeed</label>
+        <input
+          defaultValue={0}
+          {...register('trueAirSpeed', { required: true })}
+        />
+        {errors.trueAirSpeed && <span>This field is required</span>}
+
+        <label>Wind direction</label>
+        <input
+          defaultValue={180}
+          {...register('windDirection', { required: true, max: 360 })}
+        />
+        {errors.windDirection && <span>Something wrong</span>}
+
+        <label>Wind speed</label>
+        <input
+          defaultValue={0}
+          {...register('windSpeed', { required: true })}
+        />
+        {errors.windSpeed && <span>This field is required</span>}
+
+        <input type="submit" />
+      </form>
+      <div>
+        <p>
+          N = {windAccounted?.N.correctionAngle} -{' '}
+          {windAccounted?.N.groundSpeed}
+        </p>
+        <p>
+          NE = {windAccounted?.NE.correctionAngle} -{' '}
+          {windAccounted?.NE.groundSpeed}
+        </p>
+        <p>
+          E = {windAccounted?.E.correctionAngle} -{' '}
+          {windAccounted?.E.groundSpeed}
+        </p>
+        <p>
+          SE = {windAccounted?.SE.correctionAngle} -{' '}
+          {windAccounted?.SE.groundSpeed}
+        </p>
+        <p>
+          S = {windAccounted?.S.correctionAngle} -{' '}
+          {windAccounted?.S.groundSpeed}
+        </p>
+        <p>
+          SW = {windAccounted?.SW.correctionAngle} -{' '}
+          {windAccounted?.SW.groundSpeed}
+        </p>
+        <p>
+          W = {windAccounted?.W.correctionAngle} -{' '}
+          {windAccounted?.W.groundSpeed}
+        </p>
+        <p>
+          NW = {windAccounted?.NW.correctionAngle} -{' '}
+          {windAccounted?.NW.groundSpeed}
+        </p>
       </div>
     </div>
   )
 }
-
-export default App
