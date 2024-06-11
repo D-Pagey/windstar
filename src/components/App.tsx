@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
+import { Input } from './ui/input'
 
 type Inputs = {
   windDirection: number
@@ -14,18 +15,18 @@ type Direction = {
 
 type Directions = 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW' | 'N'
 
+type Wind = Record<Directions, Direction>
+
 export default function App() {
-  const [windAccounted, setWindAccounted] =
-    useState<Record<Directions, Direction>>()
+  const [windAccounted, setWindAccounted] = useState<Wind>()
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors }
   } = useForm<Inputs>()
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    const updated: Record<Directions, Direction> = {
+    const updated: Wind = {
       N: { groundSpeed: 100, correctionAngle: -5 },
       NE: { groundSpeed: 100, correctionAngle: -5 },
       E: { groundSpeed: 100, correctionAngle: -5 },
@@ -50,6 +51,7 @@ export default function App() {
           defaultValue={0}
           {...register('trueAirSpeed', { required: true })}
         />
+        <Input />
         {errors.trueAirSpeed && <span>This field is required</span>}
 
         <label>Wind direction</label>
