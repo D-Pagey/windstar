@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { Input } from './ui/input'
+import { getCorrectionAngleAndSpeed } from '@/lib/utils'
 
 type Inputs = {
   windDirection: number
   windSpeed: number
-  trueAirSpeed: number
+  trueAirspeed: number
 }
 
 type Direction = {
@@ -25,16 +26,60 @@ export default function App() {
     formState: { errors }
   } = useForm<Inputs>()
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
+  const onSubmit: SubmitHandler<Inputs> = ({
+    windDirection,
+    windSpeed,
+    trueAirspeed
+  }) => {
     const updated: Wind = {
-      N: { groundSpeed: 100, correctionAngle: -5 },
-      NE: { groundSpeed: 100, correctionAngle: -5 },
-      E: { groundSpeed: 100, correctionAngle: -5 },
-      SE: { groundSpeed: 100, correctionAngle: -5 },
-      S: { groundSpeed: 100, correctionAngle: -5 },
-      SW: { groundSpeed: 100, correctionAngle: -5 },
-      W: { groundSpeed: 100, correctionAngle: -5 },
-      NW: { groundSpeed: 100, correctionAngle: -5 }
+      N: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 360
+      }),
+      NE: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 45
+      }),
+      E: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 90
+      }),
+      SE: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 135
+      }),
+      S: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 180
+      }),
+      SW: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 225
+      }),
+      W: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 270
+      }),
+      NW: getCorrectionAngleAndSpeed({
+        windDirection,
+        windSpeed,
+        trueAirspeed,
+        trueCourse: 315
+      })
     }
 
     setWindAccounted(updated)
@@ -49,10 +94,10 @@ export default function App() {
         <label>True Airspeed</label>
         <input
           defaultValue={0}
-          {...register('trueAirSpeed', { required: true })}
+          {...register('trueAirspeed', { required: true })}
         />
         <Input />
-        {errors.trueAirSpeed && <span>This field is required</span>}
+        {errors.trueAirspeed && <span>This field is required</span>}
 
         <label>Wind direction</label>
         <input
