@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { WindForm } from './WindForm'
 import { Correction } from '@/types'
+import { ModeToggle } from './ModeToggle'
 
 const compassDirections: Record<number, string> = {
   360: 'North',
@@ -17,22 +18,27 @@ export default function App() {
   const [windCorrections, setWindCorrections] = useState<Correction[]>()
 
   return (
-    <div className="bg-gray-50">
-      <ul>
-        {windCorrections?.map((windCorrection) => (
-          <li key={windCorrection.trueCourse}>
-            <p>
-              {compassDirections[windCorrection.trueCourse]} -{' '}
-              {windCorrection.trueCourse}
-            </p>
-            <p>{windCorrection.correctionAngle}</p>
-            <p>{windCorrection.trueCourse + windCorrection.correctionAngle}</p>
-            <p>{windCorrection.groundSpeed}</p>
-          </li>
-        ))}
-      </ul>
+    <div>
+      <ModeToggle />
+      <div className="bg-gray-50">
+        <ul>
+          {windCorrections?.map((windCorrection) => (
+            <li key={windCorrection.trueCourse}>
+              <p>
+                {compassDirections[windCorrection.trueCourse]} -{' '}
+                {windCorrection.trueCourse}
+              </p>
+              <p>{windCorrection.correctionAngle}</p>
+              <p>
+                {windCorrection.trueCourse + windCorrection.correctionAngle}
+              </p>
+              <p>{windCorrection.groundSpeed}</p>
+            </li>
+          ))}
+        </ul>
 
-      <WindForm setWindCorrection={setWindCorrections} />
+        <WindForm setWindCorrection={setWindCorrections} />
+      </div>
     </div>
   )
 }

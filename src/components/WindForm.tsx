@@ -31,7 +31,7 @@ export const WindForm = ({ setWindCorrection }: Props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      windDirection: '360',
+      windDirection: '315',
       windSpeed: '10',
       trueAirspeed: '90'
     }
