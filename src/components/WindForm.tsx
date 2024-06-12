@@ -1,5 +1,3 @@
-'use client'
-
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -16,28 +14,26 @@ import {
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 
-import { Wind } from './App'
-import { getCorrectionAngleAndSpeed } from '@/lib/utils'
+import { generateCompassCorrections } from '@/lib/utils'
+import { Correction } from '@/types'
 
 type Props = {
-  setWindCorrection: (windCorrections: Wind) => void
+  setWindCorrection: (windCorrections: Correction[]) => void
 }
 
 const formSchema = z.object({
-  windDirection: z.number().min(2, {
-    message: 'Username must be at least 2 characters.'
-  }),
-  windSpeed: z.number(),
-  trueAirspeed: z.number()
+  windDirection: z.string(),
+  windSpeed: z.string(),
+  trueAirspeed: z.string()
 })
 
 export const WindForm = ({ setWindCorrection }: Props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      windDirection: 360,
-      windSpeed: 10,
-      trueAirspeed: 90
+      windDirection: '360',
+      windSpeed: '10',
+      trueAirspeed: '90'
     }
   })
 
@@ -46,58 +42,13 @@ export const WindForm = ({ setWindCorrection }: Props) => {
     windSpeed,
     trueAirspeed
   }: z.infer<typeof formSchema>) => {
-    const updated: Wind = {
-      N: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 360
-      }),
-      NE: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 45
-      }),
-      E: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 90
-      }),
-      SE: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 135
-      }),
-      S: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 180
-      }),
-      SW: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 225
-      }),
-      W: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 270
-      }),
-      NW: getCorrectionAngleAndSpeed({
-        windDirection,
-        windSpeed,
-        trueAirspeed,
-        trueCourse: 315
-      })
-    }
+    const windCorrections = generateCompassCorrections({
+      windDirection: Number(windDirection),
+      windSpeed: Number(windSpeed),
+      trueAirspeed: Number(trueAirspeed)
+    })
 
-    setWindCorrection(updated)
+    setWindCorrection(windCorrections)
   }
 
   return (
@@ -110,7 +61,7 @@ export const WindForm = ({ setWindCorrection }: Props) => {
             <FormItem>
               <FormLabel>Wind Direction</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input {...field} type="number" />
               </FormControl>
               <FormDescription>The speed of the wind dumbass</FormDescription>
               <FormMessage />
@@ -124,7 +75,7 @@ export const WindForm = ({ setWindCorrection }: Props) => {
             <FormItem>
               <FormLabel>Windspeed</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input {...field} type="number" />
               </FormControl>
               <FormDescription>The speed of the wind dumbass</FormDescription>
               <FormMessage />
@@ -138,7 +89,7 @@ export const WindForm = ({ setWindCorrection }: Props) => {
             <FormItem>
               <FormLabel>True airspeed</FormLabel>
               <FormControl>
-                <Input placeholder="shadcn" {...field} />
+                <Input {...field} type="number" />
               </FormControl>
               <FormDescription>The speed of the wind dumbass</FormDescription>
               <FormMessage />

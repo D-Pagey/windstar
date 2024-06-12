@@ -1,3 +1,4 @@
+import { Correction } from '@/types'
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
 
@@ -5,7 +6,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-// windspeed, winddirection, true course, true airspeed
 export const getCorrectionAngleAndSpeed = ({
   windSpeed,
   windDirection,
@@ -33,6 +33,28 @@ export const getCorrectionAngleAndSpeed = ({
 
   return {
     correctionAngle: Number(windCorrectionAngle.toFixed(1)),
-    groundSpeed: Math.round(groundSpeed)
+    groundSpeed: Math.round(groundSpeed),
+    trueCourse
   }
+}
+
+export const generateCompassCorrections = ({
+  windSpeed,
+  windDirection,
+  trueAirspeed
+}: {
+  windSpeed: number
+  windDirection: number
+  trueAirspeed: number
+}): Correction[] => {
+  const courseOptions = [360, 45, 90, 135, 180, 225, 270, 315]
+
+  return courseOptions.map((course) =>
+    getCorrectionAngleAndSpeed({
+      windSpeed,
+      windDirection,
+      trueAirspeed,
+      trueCourse: course
+    })
+  )
 }
