@@ -33,6 +33,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
       >
         {points.map((point) => (
           <div
+            key={point}
             style={{
               transform: `translate(-50%, -100%) rotate(${point}deg) translateY(-125px)`
             }}
@@ -42,6 +43,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
 
         {Object.entries(letters).map(([letter, transform]) => (
           <p
+            key={letter}
             style={{
               transform
             }}
@@ -57,6 +59,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
             style={{
               transform: corrections[correction.trueCourse]
             }}
+            key={correction.trueCourse}
           >
             <p className="text-2xl">{correction.groundSpeed}</p>
             <p className="text-2xl">{correction.correctionAngle}</p>
