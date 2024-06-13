@@ -3,17 +3,7 @@ import { WindForm } from './WindForm'
 import { Correction } from '@/types'
 import { ModeToggle } from './ModeToggle'
 import { HeadingIndicator } from './HeadingIndicator'
-
-const compassDirections: Record<number, string> = {
-  360: 'North',
-  45: 'North East',
-  90: 'East',
-  135: 'South East',
-  180: 'South',
-  225: 'South West',
-  270: 'West',
-  315: 'North West'
-}
+import { HeadingSvg } from './HeadingSvg'
 
 export default function App() {
   const [windCorrections, setWindCorrections] = useState<Correction[]>()
@@ -21,26 +11,9 @@ export default function App() {
   return (
     <div className="bg-gray-50 p-4 dark:bg-slate-900 flex flex-col grow min-h-screen">
       <ModeToggle />
-      <HeadingIndicator />
-      <div>
-        <ul>
-          {windCorrections?.map((windCorrection) => (
-            <li key={windCorrection.trueCourse}>
-              <p>
-                {compassDirections[windCorrection.trueCourse]} -{' '}
-                {windCorrection.trueCourse}
-              </p>
-              <p>{windCorrection.correctionAngle}</p>
-              <p>
-                {windCorrection.trueCourse + windCorrection.correctionAngle}
-              </p>
-              <p>{windCorrection.groundSpeed}</p>
-            </li>
-          ))}
-        </ul>
-
-        <WindForm setWindCorrection={setWindCorrections} />
-      </div>
+      <HeadingIndicator windCorrections={windCorrections} />
+      <WindForm setWindCorrection={setWindCorrections} />
+      {/* <HeadingSvg /> */}
     </div>
   )
 }
