@@ -58,10 +58,8 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
               transform: corrections[correction.trueCourse]
             }}
           >
-            <p className="text-green-500 text-2xl">{correction.groundSpeed}</p>
-            <p className="text-blue-400 text-2xl">
-              {correction.correctionAngle}
-            </p>
+            <p className="text-2xl">{correction.groundSpeed}</p>
+            <p className="text-2xl">{correction.correctionAngle}</p>
           </div>
         ))}
       </div>
