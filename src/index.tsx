@@ -7,7 +7,7 @@ const container = document.getElementById('root') as HTMLDivElement
 const root = createRoot(container)
 
 root.render(
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+  <ThemeProvider defaultTheme="dark" storageKey="windstar-ui-theme">
     <App />
   </ThemeProvider>
 )

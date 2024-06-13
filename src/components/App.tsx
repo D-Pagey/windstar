@@ -18,9 +18,9 @@ export default function App() {
   const [windCorrections, setWindCorrections] = useState<Correction[]>()
 
   return (
-    <div>
+    <div className="bg-gray-50 p-4 dark:bg-slate-900 flex flex-col grow min-h-screen">
       <ModeToggle />
-      <div className="bg-gray-50">
+      <div>
         <ul>
           {windCorrections?.map((windCorrection) => (
             <li key={windCorrection.trueCourse}>
