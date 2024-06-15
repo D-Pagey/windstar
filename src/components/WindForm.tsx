@@ -19,6 +19,7 @@ import { Correction } from '@/types'
 
 type Props = {
   setWindCorrection: (windCorrections: Correction[]) => void
+  setWind: ({ direction, speed }: { direction: number; speed: number }) => void
 }
 
 const formSchema = z.object({
@@ -27,7 +28,7 @@ const formSchema = z.object({
   trueAirspeed: z.string()
 })
 
-export const WindForm = ({ setWindCorrection }: Props) => {
+export const WindForm = ({ setWindCorrection, setWind }: Props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -49,6 +50,7 @@ export const WindForm = ({ setWindCorrection }: Props) => {
     })
 
     setWindCorrection(windCorrections)
+    setWind({ direction: Number(windDirection), speed: Number(windSpeed) })
   }
 
   return (

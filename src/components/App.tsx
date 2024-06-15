@@ -6,11 +6,12 @@ import { HeadingIndicator } from './HeadingIndicator'
 
 export default function App() {
   const [windCorrections, setWindCorrections] = useState<Correction[]>()
+  const [wind, setWind] = useState<{ direction: number; speed: number }>()
 
   return (
     <div className="bg-gray-50 p-4 dark:bg-slate-900 flex flex-col grow min-h-screen">
-      <HeadingIndicator windCorrections={windCorrections} />
-      <WindForm setWindCorrection={setWindCorrections} />
+      <HeadingIndicator windCorrections={windCorrections} wind={wind} />
+      <WindForm setWindCorrection={setWindCorrections} setWind={setWind} />
       {/* <HeadingSvg /> */}
     </div>
   )

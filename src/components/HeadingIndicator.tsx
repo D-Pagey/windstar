@@ -25,9 +25,10 @@ const corrections: Record<number, string> = {
 
 type Props = {
   windCorrections?: Correction[]
+  wind?: { direction: number; speed: number }
 }
 
-export const HeadingIndicator = ({ windCorrections }: Props) => {
+export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
   return (
     <div className="py-20 flex justify-center w-full self-center">
       <div
@@ -56,7 +57,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
           </p>
         ))}
 
-        <WindIndicator speed={35} />
+        <WindIndicator speed={wind?.speed} direction={wind?.direction} />
 
         {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (

@@ -9,10 +9,13 @@ import {
 } from './Barbs'
 
 type Props = {
-  speed: number
+  direction?: number
+  speed?: number
 }
 
-export const WindIndicator = ({ speed }: Props) => {
+export const WindIndicator = ({ direction, speed }: Props) => {
+  if (!speed) return null
+
   const generateBarbs = () => {
     if (speed <= 2) return null
     if (speed <= 8) return <FiveKnots />
@@ -25,13 +28,19 @@ export const WindIndicator = ({ speed }: Props) => {
     return <ThirtyFiveKnots />
   }
 
+  const calculateRotation = () => {
+    if (!direction) return 0
+    return direction - 270
+  }
+
   return (
     <svg
       width="100px"
       height="100px"
+      style={{ rotate: `${calculateRotation()}deg` }}
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
-      className="border border-green-400 absolute left-0 right-0 top-0 bottom-0 m-auto"
+      className="absolute left-0 right-0 top-0 bottom-0 m-auto"
     >
       <circle
         cx="50"
