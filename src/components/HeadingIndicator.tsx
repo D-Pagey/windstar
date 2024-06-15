@@ -56,7 +56,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
         ))}
 
         {/* Arrow */}
-        <div className="h-[2px] bg-white w-[75px] absolute left-0 right-0 top-1/2 m-auto" />
+        <div className="h-[2px] bg-white w-[75px] absolute left-0 right-0 top-0 bottom-0 m-auto" />
 
         {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (
