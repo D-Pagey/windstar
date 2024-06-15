@@ -12,14 +12,14 @@ const letters = {
 // easier to use css and media queeries?
 // google at least ask somewhere
 const corrections: Record<number, string> = {
-  360: 'translate(-50%, -100%) translateY(-180px) translateX(0px)',
-  45: 'translate(-50%, -100%) translateY(-100px) translateX(160px)',
-  90: 'translate(-50%, -100%) translateY(30px) translateX(192px)',
-  135: 'translate(-50%, -100%) translateY(170px) translateX(140px)',
-  180: 'translate(-50%, -100%) translateY(240px) translateX(0px)',
-  225: 'translate(-50%, -100%) translateY(190px) translateX(-130px)',
-  270: 'translate(-50%, -100%) translateY(35px) translateX(-190px)',
-  315: 'translate(-50%, -100%) translateY(-115px) translateX(-150px)'
+  45: 'translate(-50%, -100%) translateY(-60px) translateX(118px)',
+  90: 'translate(-50%, -100%) translateY(25px) translateX(141px)',
+  135: 'translate(-50%, -100%) translateY(116px) translateX(118px)',
+  180: 'translate(-50%, -100%) translateY(160px) translateX(8px)',
+  225: 'translate(-50%, -100%) translateY(116px) translateX(-115px)',
+  270: 'translate(-50%, -100%) translateY(25px) translateX(-140px)',
+  315: 'translate(-50%, -100%) translateY(-60px) translateX(-115px)',
+  360: 'translate(-50%, -100%) translateY(-115px) translateX(8px)'
 }
 
 type Props = {
@@ -28,7 +28,7 @@ type Props = {
 
 export const HeadingIndicator = ({ windCorrections }: Props) => {
   return (
-    <div className="flex justify-center w-max self-center">
+    <div className="py-20 flex justify-center w-full border self-center">
       <div
         className="size-[220px] rounded-full relative"
         style={{ backgroundColor: '#232323' }}
@@ -55,18 +55,22 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
           </p>
         ))}
 
-        {windCorrections?.map((correction) => (
-          <div
-            className="w-max absolute top-1/2 left-1/2"
-            style={{
-              transform: corrections[correction.trueCourse]
-            }}
-            key={correction.trueCourse}
-          >
-            <p className="text-2xl">{correction.groundSpeed}</p>
-            <p className="text-2xl">{correction.correctionAngle}</p>
-          </div>
-        ))}
+        {windCorrections?.map(
+          ({ trueCourse, correctionAngle, groundSpeed }) => (
+            <div
+              className="text-white w-max absolute top-1/2 left-1/2"
+              style={{
+                transform: corrections[trueCourse]
+              }}
+              key={trueCourse}
+            >
+              <p className="text">
+                {Math.round(trueCourse + correctionAngle)}°
+              </p>
+              <p className="text">{groundSpeed} kts</p>
+            </div>
+          )
+        )}
       </div>
     </div>
   )
