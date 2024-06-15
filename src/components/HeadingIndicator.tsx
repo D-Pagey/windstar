@@ -56,7 +56,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
           </p>
         ))}
 
-        <WindIndicator speed={3} />
+        <WindIndicator speed={35} />
 
         {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (

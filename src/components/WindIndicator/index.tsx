@@ -1,27 +1,12 @@
-const BaseLine = () => (
-  <line
-    x1="10"
-    y1="50"
-    x2="42"
-    y2="50"
-    className="stroke-white stroke-2"
-    strokeLinecap="round"
-  />
-)
-
-const FiveKnots = () => (
-  <>
-    <BaseLine />
-    <line
-      strokeLinecap="round"
-      x1="12"
-      y1="41"
-      x2="15"
-      y2="50"
-      className="stroke-white stroke-2"
-    />
-  </>
-)
+import {
+  FiveKnots,
+  FiveteenKnots,
+  TenKnots,
+  ThirtyFiveKnots,
+  ThirtyKnots,
+  TwentyFiveKnots,
+  TwentyKnots
+} from './Barbs'
 
 type Props = {
   speed: number
@@ -31,8 +16,13 @@ export const WindIndicator = ({ speed }: Props) => {
   const generateBarbs = () => {
     if (speed <= 2) return null
     if (speed <= 8) return <FiveKnots />
+    if (speed <= 12) return <TenKnots />
+    if (speed <= 17) return <FiveteenKnots />
+    if (speed <= 22) return <TwentyKnots />
+    if (speed <= 27) return <TwentyFiveKnots />
+    if (speed <= 32) return <ThirtyKnots />
 
-    return null
+    return <ThirtyFiveKnots />
   }
 
   return (
@@ -50,14 +40,6 @@ export const WindIndicator = ({ speed }: Props) => {
         className="fill-none stroke-white stroke-2"
       />
       {generateBarbs()}
-      {/* <line
-        strokeLinecap="round"
-        x1="5"
-        y1="35"
-        x2="10"
-        y2="50"
-        className="stroke-white stroke-2"
-      /> */}
     </svg>
   )
 }
