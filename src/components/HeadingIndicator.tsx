@@ -3,12 +3,14 @@ import { Correction } from '@/types'
 const points = [0, 45, 90, 135, 180, 225, 270, 315]
 
 const letters = {
-  N: 'translate(-50%, -100%) translateY(-85px) translateX(1px)',
-  E: 'translate(-50%, -100%) translateY(18px) translateX(105px)',
-  S: 'translate(-50%, -100%) translateY(120px) translateX(0px)',
-  W: 'translate(-50%, -100%) translateY(18px) translateX(-100px)'
+  N: 'translate(-50%, -100%) translateY(-52px) translateX(1px)',
+  E: 'translate(-50%, -100%) translateY(18px) translateX(75px)',
+  S: 'translate(-50%, -100%) translateY(85px) translateX(0px)',
+  W: 'translate(-50%, -100%) translateY(18px) translateX(-70px)'
 }
 
+// easier to use css and media queeries?
+// google at least ask somewhere
 const corrections: Record<number, string> = {
   360: 'translate(-50%, -100%) translateY(-180px) translateX(0px)',
   45: 'translate(-50%, -100%) translateY(-100px) translateX(160px)',
@@ -26,18 +28,18 @@ type Props = {
 
 export const HeadingIndicator = ({ windCorrections }: Props) => {
   return (
-    <div className="flex justify-center p-20 w-max self-center">
+    <div className="flex justify-center w-max self-center">
       <div
-        className="size-80 rounded-full relative"
+        className="size-[220px] rounded-full relative"
         style={{ backgroundColor: '#232323' }}
       >
         {points.map((point) => (
           <div
             key={point}
             style={{
-              transform: `translate(-50%, -100%) rotate(${point}deg) translateY(-125px)`
+              transform: `translate(-50%, -100%) rotate(${point}deg) translateY(-90px)`
             }}
-            className="h-[25px] w-[2px] bg-white absolute top-1/2 left-1/2 origin-bottom"
+            className="h-[20px] w-[2px] bg-white absolute top-1/2 left-1/2 origin-bottom"
           />
         ))}
 
