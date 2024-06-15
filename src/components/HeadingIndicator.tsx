@@ -1,4 +1,5 @@
 import { Correction } from '@/types'
+import { WindIndicator } from './WindIndicator'
 
 const points = [0, 45, 90, 135, 180, 225, 270, 315]
 
@@ -55,8 +56,7 @@ export const HeadingIndicator = ({ windCorrections }: Props) => {
           </p>
         ))}
 
-        {/* Arrow */}
-        <div className="h-[2px] bg-white w-[75px] absolute left-0 right-0 top-0 bottom-0 m-auto" />
+        <WindIndicator speed={3} />
 
         {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (
