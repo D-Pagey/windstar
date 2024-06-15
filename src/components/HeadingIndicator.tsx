@@ -28,7 +28,7 @@ type Props = {
 
 export const HeadingIndicator = ({ windCorrections }: Props) => {
   return (
-    <div className="py-20 flex justify-center w-full border self-center">
+    <div className="py-20 flex justify-center w-full self-center">
       <div
         className="size-[220px] rounded-full relative"
         style={{ backgroundColor: '#232323' }}
