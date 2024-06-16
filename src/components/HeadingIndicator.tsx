@@ -62,7 +62,7 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
         {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (
             <div
-              className="text-white w-max absolute top-1/2 left-1/2"
+              className="w-max absolute top-1/2 left-1/2"
               style={{
                 transform: corrections[trueCourse]
               }}
