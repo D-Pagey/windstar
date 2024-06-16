@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import {
   FiveKnots,
   FiveteenKnots,
@@ -34,21 +35,21 @@ export const WindIndicator = ({ direction, speed }: Props) => {
   }
 
   return (
-    <svg
+    <motion.svg
       width="100px"
       height="100px"
-      style={{ rotate: `${calculateRotation()}deg` }}
+      animate={{ rotate: `${calculateRotation()}deg` }}
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
       className="absolute inset-0 m-auto"
     >
-      <circle
+      <motion.circle
         cx="50"
         cy="50"
         r="7"
         className="fill-none stroke-white stroke-2"
       />
       {generateBarbs()}
-    </svg>
+    </motion.svg>
   )
 }
