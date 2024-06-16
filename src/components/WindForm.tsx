@@ -1,3 +1,4 @@
+import { Slider } from '@/components/ui/slider'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
@@ -23,18 +24,18 @@ type Props = {
 }
 
 const formSchema = z.object({
-  windDirection: z.string(),
-  windSpeed: z.string(),
-  trueAirspeed: z.string()
+  windDirection: z.number(),
+  windSpeed: z.number(),
+  trueAirspeed: z.number()
 })
 
 export const WindForm = ({ setWindCorrection, setWind }: Props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      windDirection: '315',
-      windSpeed: '10',
-      trueAirspeed: '90'
+      windDirection: 335,
+      windSpeed: 15,
+      trueAirspeed: 90
     }
   })
 
@@ -43,14 +44,16 @@ export const WindForm = ({ setWindCorrection, setWind }: Props) => {
     windSpeed,
     trueAirspeed
   }: z.infer<typeof formSchema>) => {
-    const windCorrections = generateCompassCorrections({
-      windDirection: Number(windDirection),
-      windSpeed: Number(windSpeed),
-      trueAirspeed: Number(trueAirspeed)
-    })
+    console.log({ windDirection })
 
-    setWindCorrection(windCorrections)
-    setWind({ direction: Number(windDirection), speed: Number(windSpeed) })
+    // const windCorrections = generateCompassCorrections({
+    //   windDirection: Number(windDirection),
+    //   windSpeed: Number(windSpeed),
+    //   trueAirspeed: Number(trueAirspeed)
+    // })
+
+    // setWindCorrection(windCorrections)
+    // setWind({ direction: Number(windDirection), speed: Number(windSpeed) })
   }
 
   return (
@@ -63,37 +66,32 @@ export const WindForm = ({ setWindCorrection, setWind }: Props) => {
             <FormItem>
               <FormLabel>Wind Direction</FormLabel>
               <FormControl>
-                <Input {...field} type="number" />
+                <Slider
+                  min={1}
+                  max={360}
+                  step={1}
+                  defaultValue={[field.value]}
+                  onValueChange={(vals) => {
+                    field.onChange(vals[0])
+                  }}
+                  value={[form.getValues('windDirection')]}
+                />
               </FormControl>
-              <FormDescription>The speed of the wind dumbass</FormDescription>
+              <FormDescription>Where is the wind coming from?</FormDescription>
               <FormMessage />
             </FormItem>
           )}
         />
         <FormField
           control={form.control}
-          name="windSpeed"
+          name="windDirection"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Windspeed</FormLabel>
+              <FormLabel>Wind Direction</FormLabel>
               <FormControl>
                 <Input {...field} type="number" />
               </FormControl>
-              <FormDescription>The speed of the wind dumbass</FormDescription>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="trueAirspeed"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>True airspeed</FormLabel>
-              <FormControl>
-                <Input {...field} type="number" />
-              </FormControl>
-              <FormDescription>The speed of the wind dumbass</FormDescription>
+              <FormDescription>Where is the wind coming from?</FormDescription>
               <FormMessage />
             </FormItem>
           )}
