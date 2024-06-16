@@ -30,9 +30,9 @@ type Props = {
 
 export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
   return (
-    <div className="py-20 flex justify-center w-full self-center">
+    <div className="flex w-full justify-center self-center py-20">
       <div
-        className="size-[220px] rounded-full relative"
+        className="relative size-[220px] rounded-full"
         style={{ backgroundColor: '#232323' }}
       >
         {points.map((point) => (
@@ -41,7 +41,7 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
             style={{
               transform: `translate(-50%, -100%) rotate(${point}deg) translateY(-90px)`
             }}
-            className="h-[20px] w-[2px] bg-white absolute top-1/2 left-1/2 origin-bottom"
+            className="absolute left-1/2 top-1/2 h-[20px] w-[2px] origin-bottom bg-white"
           />
         ))}
 
@@ -51,7 +51,7 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
             style={{
               transform
             }}
-            className="text-white absolute top-1/2 left-1/2 text-3xl"
+            className="absolute left-1/2 top-1/2 text-3xl text-white"
           >
             {letter}
           </p>
@@ -62,16 +62,14 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
         {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (
             <div
-              className="w-max absolute top-1/2 left-1/2"
+              className="absolute left-1/2 top-1/2 w-max"
               style={{
                 transform: corrections[trueCourse]
               }}
               key={trueCourse}
             >
-              <p className="text">
-                {Math.round(trueCourse + correctionAngle)}°
-              </p>
-              <p className="text">{groundSpeed} kts</p>
+              <p>{Math.round(trueCourse + correctionAngle)}°</p>
+              <p>{groundSpeed} kts</p>
             </div>
           )
         )}

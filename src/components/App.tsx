@@ -9,7 +9,7 @@ export default function App() {
   const [wind, setWind] = useState<{ direction: number; speed: number }>()
 
   return (
-    <div className="bg-gray-50 p-4 dark:bg-slate-900 flex flex-col grow min-h-screen">
+    <div className="flex min-h-screen grow flex-col bg-gray-50 p-4 dark:bg-slate-900">
       <HeadingIndicator windCorrections={windCorrections} wind={wind} />
       <WindForm setWindCorrection={setWindCorrections} setWind={setWind} />
       {/* <HeadingSvg /> */}

@@ -8,14 +8,14 @@ export const HeadingSvg = () => (
     width="400.667px"
     height="400.666px"
     viewBox="0 0 400.667 400.666"
-    enable-background="new 0 0 400.667 400.666"
+    enableBackground="new 0 0 400.667 400.666"
   >
     <circle fill="#232323" cx="200.333" cy="200" r="161" />
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="200.333"
       y1="350.099"
       x2="200.333"
@@ -24,8 +24,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="213.416"
       y1="349.528"
       x2="212.023"
@@ -34,8 +34,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="239.182"
       y1="344.985"
       x2="235.046"
@@ -44,8 +44,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="263.768"
       y1="336.036"
       x2="257.015"
@@ -54,8 +54,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="286.427"
       y1="322.955"
       x2="277.261"
@@ -64,8 +64,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="306.47"
       y1="306.137"
       x2="295.17"
@@ -74,8 +74,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="323.289"
       y1="286.094"
       x2="310.198"
@@ -84,8 +84,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="336.371"
       y1="263.436"
       x2="321.887"
@@ -94,8 +94,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="345.32"
       y1="238.85"
       x2="329.883"
@@ -104,8 +104,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="349.864"
       y1="213.083"
       x2="333.943"
@@ -114,8 +114,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="349.864"
       y1="186.918"
       x2="333.944"
@@ -124,8 +124,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="345.321"
       y1="161.151"
       x2="329.885"
@@ -134,8 +134,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="336.373"
       y1="136.565"
       x2="321.89"
@@ -144,8 +144,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="323.291"
       y1="113.906"
       x2="310.202"
@@ -154,8 +154,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="306.472"
       y1="93.863"
       x2="295.174"
@@ -164,8 +164,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="286.429"
       y1="77.045"
       x2="277.265"
@@ -174,8 +174,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="263.771"
       y1="63.962"
       x2="257.019"
@@ -184,8 +184,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="239.185"
       y1="55.013"
       x2="235.05"
@@ -194,8 +194,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="213.418"
       y1="50.469"
       x2="212.027"
@@ -204,8 +204,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="187.254"
       y1="50.469"
       x2="188.648"
@@ -214,8 +214,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="161.488"
       y1="55.012"
       x2="165.625"
@@ -224,8 +224,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="136.901"
       y1="63.96"
       x2="143.656"
@@ -234,8 +234,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="114.242"
       y1="77.042"
       x2="123.409"
@@ -244,8 +244,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="94.199"
       y1="93.86"
       x2="105.499"
@@ -254,8 +254,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="77.38"
       y1="113.903"
       x2="90.47"
@@ -264,8 +264,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="64.298"
       y1="136.562"
       x2="78.781"
@@ -274,8 +274,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="55.349"
       y1="161.148"
       x2="70.785"
@@ -284,8 +284,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="50.805"
       y1="186.915"
       x2="66.724"
@@ -294,8 +294,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="50.804"
       y1="213.079"
       x2="66.723"
@@ -304,8 +304,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="55.347"
       y1="238.845"
       x2="70.783"
@@ -314,8 +314,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="64.295"
       y1="263.432"
       x2="78.778"
@@ -324,8 +324,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="77.376"
       y1="286.091"
       x2="90.466"
@@ -334,8 +334,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="94.194"
       y1="306.135"
       x2="105.494"
@@ -344,8 +344,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="114.237"
       y1="322.954"
       x2="123.402"
@@ -354,8 +354,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="136.895"
       y1="336.037"
       x2="143.648"
@@ -364,8 +364,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="161.481"
       y1="344.986"
       x2="165.617"
@@ -374,8 +374,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="187.248"
       y1="349.53"
       x2="188.64"
@@ -384,8 +384,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="226.398"
       y1="347.819"
       x2="222.33"
@@ -394,8 +394,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="251.67"
       y1="341.047"
       x2="243.657"
@@ -404,8 +404,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="275.383"
       y1="329.99"
       x2="263.667"
@@ -414,8 +414,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="296.816"
       y1="314.983"
       x2="281.754"
@@ -424,8 +424,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="315.317"
       y1="296.483"
       x2="297.367"
@@ -434,8 +434,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="330.324"
       y1="275.05"
       x2="310.031"
@@ -444,8 +444,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="341.381"
       y1="251.337"
       x2="319.363"
@@ -454,8 +454,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="348.153"
       y1="226.065"
       x2="325.078"
@@ -464,8 +464,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="350.433"
       y1="200"
       x2="327.001"
@@ -474,8 +474,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="348.153"
       y1="173.936"
       x2="325.078"
@@ -484,8 +484,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="341.381"
       y1="148.664"
       x2="319.363"
@@ -494,8 +494,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="330.324"
       y1="124.951"
       x2="310.032"
@@ -504,8 +504,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="315.317"
       y1="103.519"
       x2="297.368"
@@ -514,8 +514,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="296.816"
       y1="85.018"
       x2="281.755"
@@ -524,8 +524,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="275.384"
       y1="70.011"
       x2="263.668"
@@ -534,8 +534,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="251.672"
       y1="58.954"
       x2="243.658"
@@ -544,8 +544,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="226.4"
       y1="52.182"
       x2="222.331"
@@ -554,8 +554,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="200.335"
       y1="49.901"
       x2="200.334"
@@ -564,8 +564,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="174.271"
       y1="52.181"
       x2="178.339"
@@ -574,8 +574,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="148.999"
       y1="58.953"
       x2="157.012"
@@ -584,8 +584,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="125.286"
       y1="70.01"
       x2="137.001"
@@ -594,8 +594,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="103.853"
       y1="85.017"
       x2="118.915"
@@ -604,8 +604,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="85.352"
       y1="103.517"
       x2="103.302"
@@ -614,8 +614,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="70.345"
       y1="124.949"
       x2="90.638"
@@ -624,8 +624,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="59.288"
       y1="148.662"
       x2="81.307"
@@ -634,8 +634,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="52.515"
       y1="173.934"
       x2="75.592"
@@ -644,8 +644,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="50.235"
       y1="199.999"
       x2="73.667"
@@ -654,8 +654,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="52.515"
       y1="226.063"
       x2="75.591"
@@ -664,8 +664,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="59.287"
       y1="251.335"
       x2="81.306"
@@ -674,8 +674,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="70.343"
       y1="275.048"
       x2="90.637"
@@ -684,8 +684,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="85.35"
       y1="296.481"
       x2="103.301"
@@ -694,8 +694,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="103.851"
       y1="314.982"
       x2="118.914"
@@ -704,8 +704,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="125.284"
       y1="329.989"
       x2="137"
@@ -714,8 +714,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="148.997"
       y1="341.047"
       x2="157.01"
@@ -724,8 +724,8 @@ export const HeadingSvg = () => (
     <line
       fill="none"
       stroke="#FFFFFF"
-      stroke-width="2"
-      stroke-miterlimit="10"
+      strokeWidth="2"
+      strokeMiterlimit="10"
       x1="174.269"
       y1="347.819"
       x2="178.337"
@@ -735,7 +735,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M192.637,101.333V79.786h0.469l14.341,16.518V79.786h2.124v21.548
 		h-0.483l-14.224-16.316v16.316H192.637z"
       />
@@ -744,7 +744,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M135.018,109.119l-1.585,0.916
 		c-0.452-1.449-0.468-2.755-0.05-3.919c0.419-1.162,1.186-2.064,2.299-2.708c0.811-0.468,1.674-0.719,2.588-0.754
 		c0.915-0.035,1.746,0.15,2.492,0.556c0.746,0.406,1.316,0.95,1.711,1.634c0.773,1.339,0.72,2.784-0.161,4.336
@@ -759,7 +759,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M147.018,102.192l-1.586,0.915
 		c-0.452-1.449-0.469-2.755-0.05-3.918c0.419-1.163,1.185-2.065,2.298-2.708c0.811-0.468,1.674-0.719,2.588-0.754
 		c0.916-0.034,1.746,0.151,2.492,0.556c0.747,0.406,1.317,0.95,1.712,1.633c0.773,1.34,0.72,2.785-0.161,4.336
@@ -776,7 +776,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M98.427,152.854l-0.915,1.585
 		c-1.116-1.029-1.783-2.152-2.003-3.369c-0.218-1.216-0.006-2.381,0.637-3.495c0.468-0.81,1.09-1.459,1.864-1.947
 		c0.775-0.487,1.587-0.742,2.436-0.764c0.85-0.022,1.615,0.165,2.299,0.559c1.34,0.773,2.016,2.052,2.029,3.835
@@ -791,7 +791,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M108.273,145.444c-2.051-1.184-3.509-2.319-4.376-3.407
 		c-0.866-1.087-1.355-2.199-1.471-3.336c-0.113-1.137,0.116-2.203,0.69-3.196c0.581-1.008,1.399-1.752,2.452-2.235
 		c1.054-0.481,2.299-0.625,3.736-0.429c1.438,0.196,3.137,0.859,5.096,1.991c1.952,1.127,3.371,2.259,4.256,3.395
@@ -807,7 +807,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M109.917,264.448l0.86,1.49c-1.558,0.843-3.112,1.057-4.665,0.643
 		c-1.552-0.414-2.745-1.344-3.579-2.789c-0.826-1.431-1.033-2.855-0.619-4.272c0.412-1.418,1.246-2.489,2.501-3.214
 		c0.882-0.509,1.83-0.775,2.846-0.799c1.016-0.025,2.534,0.191,4.554,0.646l6.408,1.466l-4.143-7.175l1.502-0.866l6.097,10.561
@@ -817,7 +817,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M93.859,248.767l-0.182-0.315l10.846-6.262l-1.086-1.882
 		l1.48-0.854l1.086,1.882l3.616-2.087l0.891,1.543l-3.616,2.088l4.297,7.441L93.859,248.767z M105.415,243.733l-6.531,3.771
 		l9.191,0.836L105.415,243.733z"
@@ -827,7 +827,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M153.804,300.688l1.491,0.86c-0.928,1.509-2.167,2.472-3.72,2.889
 		c-1.551,0.417-3.049,0.208-4.494-0.626c-1.431-0.826-2.322-1.955-2.673-3.391c-0.352-1.434-0.165-2.778,0.56-4.033
 		c0.509-0.882,1.198-1.586,2.065-2.115s2.29-1.102,4.267-1.718l6.282-1.935l-7.174-4.142l0.867-1.502l10.561,6.098l-9.648,2.991
@@ -837,7 +837,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M137.497,297.756l-3.055-1.764l8.978-15.551l1.543,0.891
 		l-8.1,14.029l2.442,1.409L137.497,297.756z"
       />
@@ -846,14 +846,14 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M265.364,296.643l-3.056,1.764l-8.979-15.551l1.544-0.892
 		l8.099,14.029l2.442-1.41L265.364,296.643z"
       />
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M248.674,306.278l-0.854-1.479l5.525-3.19l-1.67-4.689
 		c-0.562,0.588-1.112,1.038-1.655,1.352c-1.415,0.817-2.855,1.017-4.321,0.6c-1.466-0.418-2.627-1.366-3.481-2.847
 		c-0.59-1.021-0.895-2.096-0.915-3.221c-0.021-1.126,0.242-2.148,0.787-3.069c0.544-0.921,1.345-1.686,2.402-2.296
@@ -867,14 +867,14 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M305.018,250.334l-1.765,3.056l-15.551-8.979l0.892-1.543
 		l14.028,8.099l1.41-2.442L305.018,250.334z"
       />
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M295.219,256.076l0.86-1.49c1.509,0.928,2.472,2.167,2.889,3.719
 		c0.417,1.551,0.209,3.05-0.626,4.495c-0.825,1.431-1.955,2.322-3.391,2.672c-1.434,0.352-2.778,0.165-4.033-0.56
 		c-0.881-0.509-1.586-1.197-2.115-2.064c-0.528-0.868-1.102-2.29-1.718-4.267l-1.935-6.282l-4.142,7.174l-1.501-0.867l6.097-10.561
@@ -886,7 +886,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M302.287,142.898l-0.097,1.762l-8.791-0.532
 		c0.516,0.455,0.916,0.929,1.201,1.423c0.713,1.235,0.873,2.541,0.479,3.917c-0.395,1.376-1.244,2.44-2.547,3.193
 		c-0.896,0.517-1.824,0.775-2.787,0.776s-1.879-0.259-2.747-0.778c-0.868-0.519-1.557-1.22-2.066-2.102
@@ -901,7 +901,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M252.478,100.756l-1.585-0.915
 		c1.029-1.116,2.152-1.783,3.369-2.003c1.216-0.218,2.381-0.006,3.495,0.637c0.81,0.468,1.459,1.09,1.947,1.864
 		c0.487,0.775,0.742,1.587,0.764,2.436c0.022,0.85-0.165,1.615-0.559,2.299c-0.773,1.34-2.052,2.016-3.835,2.029
@@ -918,7 +918,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M80.119,212.927v-2.212l15.527-4.402l-15.527-6.177v-0.447
 		l15.527-6.105l-15.527-4.477v-2.195l21.548,6.191v0.4l-16.304,6.394l16.304,6.519v0.402L80.119,212.927z"
       />
@@ -927,7 +927,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M206.271,302.679l-1.831,1.099
 		c-1.289-2.373-2.778-3.56-4.468-3.56c-0.723,0-1.401,0.168-2.036,0.505s-1.118,0.789-1.45,1.355s-0.498,1.167-0.498,1.802
 		c0,0.723,0.244,1.431,0.732,2.124c0.674,0.957,1.904,2.109,3.691,3.457c1.797,1.357,2.915,2.339,3.354,2.944
@@ -942,7 +942,7 @@ export const HeadingSvg = () => (
       <path
         fill="#FFFFFF"
         stroke="#FFFFFF"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         d="M320.547,193.303v12.349h-2.109v-10.195h-6.753v10.107h-2.109
 		v-10.107h-8.467v10.107H299v-12.261H320.547z"
       />
