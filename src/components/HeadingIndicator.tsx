@@ -1,4 +1,5 @@
-import { Correction } from '@/types'
+// import { Correction } from '@/types'
+import { generateCompassCorrections } from '@/lib/utils'
 import { WindIndicator } from './WindIndicator'
 
 const points = [0, 45, 90, 135, 180, 225, 270, 315]
@@ -24,13 +25,23 @@ const corrections: Record<number, string> = {
 }
 
 type Props = {
-  windCorrections?: Correction[]
-  wind?: { direction: number; speed: number }
+  windDirection: number
+  windSpeed: number
+  trueAirSpeed: number
 }
 
-export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
+export const HeadingIndicator = ({
+  trueAirSpeed,
+  windSpeed,
+  windDirection
+}: Props) => {
+  const windCorrections = generateCompassCorrections({
+    windDirection,
+    windSpeed,
+    trueAirSpeed
+  })
   return (
-    <div className="flex w-full justify-center self-center py-20">
+    <div className="flex w-full justify-center self-center py-16">
       <div
         className="relative size-[220px] rounded-full"
         style={{ backgroundColor: '#232323' }}
@@ -57,22 +68,20 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
           </p>
         ))}
 
-        <WindIndicator speed={wind?.speed} direction={wind?.direction} />
+        <WindIndicator speed={windSpeed} direction={windDirection} />
 
-        {windCorrections?.map(
-          ({ trueCourse, correctionAngle, groundSpeed }) => (
-            <div
-              className="absolute left-1/2 top-1/2 w-max"
-              style={{
-                transform: corrections[trueCourse]
-              }}
-              key={trueCourse}
-            >
-              <p>{Math.round(trueCourse + correctionAngle)}°</p>
-              <p>{groundSpeed} kts</p>
-            </div>
-          )
-        )}
+        {windCorrections.map(({ trueCourse, correctionAngle, groundSpeed }) => (
+          <div
+            className="absolute left-1/2 top-1/2 w-max"
+            style={{
+              transform: corrections[trueCourse]
+            }}
+            key={trueCourse}
+          >
+            <p>{Math.round(trueCourse + correctionAngle)}°</p>
+            <p>{groundSpeed} kts</p>
+          </div>
+        ))}
       </div>
     </div>
   )
