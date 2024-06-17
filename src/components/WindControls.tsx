@@ -127,7 +127,7 @@ export const WindControls = ({
         <Slider
           min={50}
           max={200}
-          step={1}
+          step={5}
           onValueChange={(vals) => {
             setTrueAirSpeed(vals[0])
           }}

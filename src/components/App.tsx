@@ -13,22 +13,35 @@ export default function App() {
   const [trueAirSpeed, setTrueAirSpeed] = useState(90)
 
   return (
-    <div className="flex min-h-screen grow flex-col bg-gray-50 p-4 dark:bg-slate-900">
-      <HeadingIndicator
-        windDirection={windDirection}
-        windSpeed={windSpeed}
-        trueAirSpeed={trueAirSpeed}
-      />
+    <div className="min-h-screen bg-gray-50">
+      <header className="border p-4 shadow-sm">
+        <p className="text-2xl">Windstar</p>
+      </header>
 
-      <WindControls
-        windDirection={windDirection}
-        setWindDirection={setWindDirection}
-        windSpeed={windSpeed}
-        setWindSpeed={setWindSpeed}
-        trueAirSpeed={trueAirSpeed}
-        setTrueAirSpeed={setTrueAirSpeed}
-      />
-      {/* <HeadingSvg /> */}
+      <main className="flex grow flex-col p-4">
+        <div className="py-4">
+          <h1 className="mb-2 text-xl font-semibold">Diversion Planning</h1>
+          <p>
+            This is a simple tool to help pilots with planning for diversions.
+          </p>
+        </div>
+
+        <HeadingIndicator
+          windDirection={windDirection}
+          windSpeed={windSpeed}
+          trueAirSpeed={trueAirSpeed}
+        />
+
+        <WindControls
+          windDirection={windDirection}
+          setWindDirection={setWindDirection}
+          windSpeed={windSpeed}
+          setWindSpeed={setWindSpeed}
+          trueAirSpeed={trueAirSpeed}
+          setTrueAirSpeed={setTrueAirSpeed}
+        />
+        {/* <HeadingSvg /> */}
+      </main>
     </div>
   )
 }

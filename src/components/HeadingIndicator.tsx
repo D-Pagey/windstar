@@ -41,7 +41,7 @@ export const HeadingIndicator = ({
     trueAirSpeed
   })
   return (
-    <div className="flex w-full justify-center self-center py-16">
+    <div className="flex w-full justify-center self-center py-14">
       <div
         className="relative size-[220px] rounded-full"
         style={{ backgroundColor: '#232323' }}
