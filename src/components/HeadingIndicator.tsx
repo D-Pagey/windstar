@@ -1,6 +1,11 @@
 import { Correction } from '@/types'
 import { WindIndicator } from './WindIndicator'
 
+// const windCorrections = generateCompassCorrections({
+//   windDirection: Number(windDirection),
+//   windSpeed: Number(windSpeed),
+//   trueAirspeed: Number(trueAirspeed)
+// })
 const points = [0, 45, 90, 135, 180, 225, 270, 315]
 
 const letters = {
@@ -24,11 +29,11 @@ const corrections: Record<number, string> = {
 }
 
 type Props = {
-  windCorrections?: Correction[]
-  wind?: { direction: number; speed: number }
+  windDirection: number
+  windSpeed: number
 }
 
-export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
+export const HeadingIndicator = ({ windSpeed, windDirection }: Props) => {
   return (
     <div className="flex w-full justify-center self-center py-20">
       <div
@@ -57,9 +62,9 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
           </p>
         ))}
 
-        <WindIndicator speed={wind?.speed} direction={wind?.direction} />
+        <WindIndicator speed={windSpeed} direction={windDirection} />
 
-        {windCorrections?.map(
+        {/* {windCorrections?.map(
           ({ trueCourse, correctionAngle, groundSpeed }) => (
             <div
               className="absolute left-1/2 top-1/2 w-max"
@@ -72,7 +77,7 @@ export const HeadingIndicator = ({ windCorrections, wind }: Props) => {
               <p>{groundSpeed} kts</p>
             </div>
           )
-        )}
+        )} */}
       </div>
     </div>
   )
