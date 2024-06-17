@@ -2,12 +2,8 @@ import { useState } from 'react'
 
 import { WindControls } from './WindControls'
 import { HeadingIndicator } from './HeadingIndicator'
-// import { HeadingSvg } from './HeadingSvg'
-
-// remove unused components, libs
 
 export default function App() {
-  // const [windCorrections, setWindCorrections] = useState<Correction[]>()
   const [windDirection, setWindDirection] = useState(270)
   const [windSpeed, setWindSpeed] = useState(25)
   const [trueAirSpeed, setTrueAirSpeed] = useState(90)
@@ -18,7 +14,7 @@ export default function App() {
         <p className="text-2xl">Windstar</p>
       </header>
 
-      <main className="flex grow flex-col p-4">
+      <main className="flex grow flex-col p-4 pb-12">
         <div className="py-4">
           <h1 className="mb-2 text-xl font-semibold">Diversion Planning</h1>
           <p>
@@ -40,7 +36,6 @@ export default function App() {
           trueAirSpeed={trueAirSpeed}
           setTrueAirSpeed={setTrueAirSpeed}
         />
-        {/* <HeadingSvg /> */}
       </main>
     </div>
   )

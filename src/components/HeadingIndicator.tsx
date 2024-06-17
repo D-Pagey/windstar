@@ -1,4 +1,3 @@
-// import { Correction } from '@/types'
 import { generateCompassCorrections } from '@/lib/utils'
 import { WindIndicator } from './WindIndicator'
 
