@@ -78,7 +78,9 @@ export const HeadingIndicator = ({
             }}
             key={trueCourse}
           >
-            <p>{Math.round(trueCourse + correctionAngle)}°</p>
+            <p style={{ color: '#FF00FF' }}>
+              {Math.round(trueCourse + correctionAngle)}°
+            </p>
             <p>{groundSpeed} kts</p>
           </div>
         ))}
