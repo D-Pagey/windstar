@@ -69,20 +69,36 @@ export const HeadingIndicator = ({
 
         <WindIndicator speed={windSpeed} direction={windDirection} />
 
-        {windCorrections.map(({ trueCourse, correctionAngle, groundSpeed }) => (
-          <div
-            className="absolute left-1/2 top-1/2 w-max"
-            style={{
-              transform: corrections[trueCourse]
-            }}
-            key={trueCourse}
-          >
-            <p style={{ color: '#FF00FF' }}>
-              {Math.round(trueCourse + correctionAngle)}°
-            </p>
-            <p>{groundSpeed} kts</p>
-          </div>
-        ))}
+        {windCorrections.map(({ trueCourse, correctionAngle, groundSpeed }) => {
+          const colors = {
+            slower: 'text-red-600',
+            faster: 'text-green-600'
+          }
+          return (
+            <div
+              className="absolute left-1/2 top-1/2 w-max"
+              style={{
+                transform: corrections[trueCourse]
+              }}
+              key={trueCourse}
+            >
+              <p style={{ color: '#FF00FF' }}>
+                {Math.round(trueCourse + correctionAngle)}°
+              </p>
+              <p
+                className={
+                  groundSpeed > trueAirSpeed
+                    ? colors.faster
+                    : groundSpeed < trueAirSpeed
+                      ? colors.slower
+                      : ''
+                }
+              >
+                {groundSpeed} kts
+              </p>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
