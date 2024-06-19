@@ -62,7 +62,7 @@ export const WindControls = ({
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex max-w-md flex-col">
       <Label htmlFor="windDirection" className="mb-2">
         Wind Direction
       </Label>

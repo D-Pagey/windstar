@@ -14,8 +14,8 @@ export default function App() {
         <p className="text-2xl">Windstar</p>
       </header>
 
-      <main className="flex grow flex-col p-4 pb-12">
-        <div className="py-4">
+      <main className="mx-auto grid w-full max-w-lg grow p-4 pb-12 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-6 lg:gap-y-12 lg:px-0">
+        <div className="py-4 lg:col-span-2">
           <h1 className="mb-2 text-xl font-semibold">Diversion Planning</h1>
           <p>
             This is a simple tool to help pilots with planning for diversions.
