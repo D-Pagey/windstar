@@ -9,7 +9,7 @@ export default function App() {
   const [trueAirSpeed, setTrueAirSpeed] = useState(90)
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-t from-blue-200 to-50%">
       <header className="border p-4 shadow-sm">
         <p className="text-2xl">Windstar</p>
       </header>
