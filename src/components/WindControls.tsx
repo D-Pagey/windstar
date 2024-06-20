@@ -21,44 +21,23 @@ export const WindControls = ({
   setTrueAirSpeed,
   trueAirSpeed
 }: Props) => {
-  const handleSpeedChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value)
-
-    if (value >= 50) {
-      return setWindSpeed(360)
+  const handleChange = ({
+    value,
+    upperLimit,
+    setter
+  }: {
+    value: number
+    upperLimit: number
+    setter: (value: number) => void
+  }) => {
+    if (value >= upperLimit) {
+      return setter(360)
     }
     if (value <= 0 || Number.isNaN(value)) {
-      return setWindSpeed(0)
+      return setter(0)
     }
 
-    setWindSpeed(value)
-  }
-
-  const handleAirSpeedChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value)
-
-    if (value >= 200) {
-      return setTrueAirSpeed(200)
-    }
-
-    if (value <= 0 || Number.isNaN(value)) {
-      return setTrueAirSpeed(0)
-    }
-
-    setTrueAirSpeed(value)
-  }
-  const handleDirectionChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = parseInt(event.target.value)
-
-    if (value >= 360) {
-      return setWindDirection(360)
-    }
-
-    if (value <= 0 || Number.isNaN(value)) {
-      return setWindDirection(0)
-    }
-
-    setWindDirection(value)
+    setter(value)
   }
 
   return (
@@ -73,12 +52,18 @@ export const WindControls = ({
           max={360}
           inputMode="numeric"
           className="w-[80px]"
-          onChange={handleDirectionChange}
+          onChange={(event) =>
+            handleChange({
+              setter: setWindDirection,
+              upperLimit: 360,
+              value: parseInt(event.target.value)
+            })
+          }
         />
         <Slider
-          min={1}
+          min={0}
           max={360}
-          step={1}
+          step={5}
           onValueChange={(vals) => {
             setWindDirection(vals[0])
           }}
@@ -97,12 +82,18 @@ export const WindControls = ({
           max={50}
           inputMode="numeric"
           className="w-[80px]"
-          onChange={handleSpeedChange}
+          onChange={(event) =>
+            handleChange({
+              setter: setWindSpeed,
+              upperLimit: 50,
+              value: parseInt(event.target.value)
+            })
+          }
         />
         <Slider
-          min={1}
+          min={0}
           max={50}
-          step={1}
+          step={5}
           onValueChange={(vals) => {
             setWindSpeed(vals[0])
           }}
@@ -122,7 +113,13 @@ export const WindControls = ({
           max={200}
           inputMode="numeric"
           className="w-[80px]"
-          onChange={handleAirSpeedChange}
+          onChange={(event) =>
+            handleChange({
+              setter: setTrueAirSpeed,
+              upperLimit: 200,
+              value: parseInt(event.target.value)
+            })
+          }
         />
         <Slider
           min={50}
