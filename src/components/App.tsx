@@ -1,5 +1,5 @@
 import { useState } from 'react'
-
+import { Mail } from 'lucide-react'
 import { WindControls } from './WindControls'
 import { HeadingIndicator } from './HeadingIndicator'
 
@@ -7,11 +7,15 @@ export default function App() {
   const [windDirection, setWindDirection] = useState(270)
   const [windSpeed, setWindSpeed] = useState(25)
   const [trueAirSpeed, setTrueAirSpeed] = useState(90)
+  const feedbackEmail = import.meta.env.VITE_FEEDBACK_EMAIL
 
   return (
     <div className="min-h-screen bg-gradient-to-t from-blue-100 to-50%">
-      <header className="border p-4 shadow-sm">
+      <header className="border p-4 shadow-sm flex justify-between items-center">
         <p className="text-2xl">Windstar</p>
+        <a href={`mailto:${feedbackEmail}`}>
+          <Mail />
+        </a>
       </header>
 
       <main className="mx-auto grid w-full max-w-lg grow p-4 pb-32 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-6 lg:gap-y-12 lg:px-0">
