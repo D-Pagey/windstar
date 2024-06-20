@@ -74,6 +74,9 @@ export const HeadingIndicator = ({
             slower: 'text-red-600',
             faster: 'text-green-600'
           }
+
+          const direction = Math.round(trueCourse + correctionAngle)
+
           return (
             <div
               className="absolute left-1/2 top-1/2 w-max"
@@ -82,9 +85,9 @@ export const HeadingIndicator = ({
               }}
               key={trueCourse}
             >
-              <p style={{ color: '#FF00FF' }}>
-                {Math.round(trueCourse + correctionAngle)}°
-              </p>
+              {!Number.isNaN(direction) && (
+                <p style={{ color: '#FF00FF' }}>{direction}°</p>
+              )}
               <p
                 className={
                   groundSpeed > trueAirSpeed
@@ -94,7 +97,7 @@ export const HeadingIndicator = ({
                       : ''
                 }
               >
-                {groundSpeed} kts
+                {!Number.isNaN(groundSpeed) && `${groundSpeed} kts`}
               </p>
             </div>
           )
