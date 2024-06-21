@@ -1,3 +1,4 @@
+import { useDebounce } from 'use-debounce'
 import { generateCompassCorrections } from '@/lib/utils'
 import { WindIndicator } from './WindIndicator'
 
@@ -34,11 +35,15 @@ export const HeadingIndicator = ({
   windSpeed,
   windDirection
 }: Props) => {
-  const windCorrections = generateCompassCorrections({
-    windDirection,
-    windSpeed,
-    trueAirSpeed
-  })
+  const [windCorrections] = useDebounce(
+    generateCompassCorrections({
+      windDirection,
+      windSpeed,
+      trueAirSpeed
+    }),
+    250
+  )
+
   return (
     <div className="flex w-full justify-center self-center py-14">
       <div
