@@ -88,6 +88,7 @@ export const HeadingIndicator = ({
               style={{
                 transform: corrections[trueCourse]
               }}
+              // ensure rerender when values changes triggering fade animation
               key={trueCourse}
             >
               {!Number.isNaN(direction) && (
