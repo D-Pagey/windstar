@@ -84,12 +84,11 @@ export const HeadingIndicator = ({
 
           return (
             <div
-              className="absolute left-1/2 top-1/2 w-max animate-fade-in"
+              className="absolute left-1/2 top-1/2 w-max"
               style={{
                 transform: corrections[trueCourse]
               }}
-              // ensure rerender when values changes triggering fade animation
-              key={trueCourse + groundSpeed + correctionAngle}
+              key={trueCourse}
             >
               {!Number.isNaN(direction) && (
                 <p style={{ color: '#FF00FF' }}>{direction}°</p>
