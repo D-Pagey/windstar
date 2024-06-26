@@ -59,7 +59,7 @@ export const WindControls = ({
           }
         />
         <Slider
-          min={0}
+          min={5}
           max={360}
           step={5}
           onValueChange={(vals) => {
