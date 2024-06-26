@@ -77,7 +77,7 @@ export const WindControls = ({
         <Input
           name="windSpeed"
           value={windSpeed}
-          max={50}
+          max={35}
           inputMode="numeric"
           className="w-[80px]"
           onChange={(event) =>
@@ -89,8 +89,8 @@ export const WindControls = ({
           }
         />
         <Slider
-          min={0}
-          max={50}
+          min={5}
+          max={35}
           step={5}
           onValueChange={(vals) => {
             setWindSpeed(vals[0])
