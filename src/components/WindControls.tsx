@@ -129,7 +129,7 @@ export const WindControls = ({
           value={[trueAirSpeed]}
         />
       </div>
-      <p className="text-sm">Which direction is the wind coming from?</p>
+      <p className="text-sm">What is the true airspeed of your aircraft?</p>
     </div>
   )
 }
