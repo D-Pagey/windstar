@@ -10,7 +10,7 @@ export default function App() {
   const feedbackEmail = import.meta.env.VITE_FEEDBACK_EMAIL
 
   return (
-    <div className="min-h-screen bg-gradient-to-t from-blue-100 to-50%">
+    <div className="min-h-screen text-slate-800 bg-gradient-to-t from-blue-100 to-50%">
       <header className="border p-4 shadow-sm flex justify-between items-center">
         <p className="text-2xl">Windstar</p>
         <a href={`mailto:${feedbackEmail}?subject=Windstar Feedback`}>
