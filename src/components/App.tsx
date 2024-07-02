@@ -10,7 +10,7 @@ export default function App() {
   const feedbackEmail = import.meta.env.VITE_FEEDBACK_EMAIL
 
   return (
-    <div className="min-h-screen text-slate-800 bg-gradient-to-t from-blue-100 to-50%">
+    <div className="flex flex-col min-h-screen text-slate-800 bg-gradient-to-t from-blue-100 to-50%">
       <header className="border p-4 shadow-sm flex justify-between items-center">
         <p className="text-2xl">Windstar</p>
         <a
@@ -21,8 +21,11 @@ export default function App() {
         </a>
       </header>
 
-      <main className="mx-auto grid w-full max-w-lg grow p-4 pb-32 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-6 lg:gap-y-12 lg:px-0">
-        <div className="py-4 lg:col-span-2">
+      <main
+        className="mx-auto grid w-full max-w-lg grow p-4 pb-24 lg:gap-y-12 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-6 lg:px-0"
+        style={{ gridTemplateRows: 'max-content' }}
+      >
+        <div className="py-4 lg:col-span-2 lg:pb-0">
           <h1 className="mb-2 text-xl font-semibold">Diversion Planning</h1>
           <p>
             This is a simple tool to help pilots with planning for diversions.
@@ -44,6 +47,13 @@ export default function App() {
           setTrueAirSpeed={setTrueAirSpeed}
         />
       </main>
+
+      <footer className="flex py-6 justify-center">
+        Built by{' '}
+        <a href="https://pagey.dev" className="ml-1 text-blue-800 underline">
+          Dan Page
+        </a>
+      </footer>
     </div>
   )
 }
