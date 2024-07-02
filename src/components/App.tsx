@@ -13,7 +13,10 @@ export default function App() {
     <div className="min-h-screen text-slate-800 bg-gradient-to-t from-blue-100 to-50%">
       <header className="border p-4 shadow-sm flex justify-between items-center">
         <p className="text-2xl">Windstar</p>
-        <a href={`mailto:${feedbackEmail}?subject=Windstar Feedback`}>
+        <a
+          href={`mailto:${feedbackEmail}?subject=Windstar Feedback`}
+          aria-label="Email feedback for Windstar"
+        >
           <Mail />
         </a>
       </header>

@@ -45,6 +45,7 @@ export const WindControls = ({
       </Label>
       <div className="mb-2 flex gap-6">
         <Input
+          id="windDirection"
           name="windDirection"
           value={windDirection}
           max={360}
@@ -75,6 +76,7 @@ export const WindControls = ({
       </Label>
       <div className="mb-2 flex gap-6">
         <Input
+          id="windSpeed"
           name="windSpeed"
           value={windSpeed}
           max={35}
@@ -105,6 +107,7 @@ export const WindControls = ({
       </Label>
       <div className="mb-2 flex gap-6">
         <Input
+          id="trueAirSpeed"
           name="trueAirSpeed"
           value={trueAirSpeed}
           min={50}
