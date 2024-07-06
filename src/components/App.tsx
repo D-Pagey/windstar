@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Mail } from 'lucide-react'
 import { WindControls } from './WindControls'
 import { HeadingIndicator } from './HeadingIndicator'
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [windDirection, setWindDirection] = useState(270)
@@ -59,6 +60,7 @@ export default function App() {
           Dan Page
         </a>
       </footer>
+      <Analytics />
     </div>
   )
 }
