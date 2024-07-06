@@ -50,7 +50,12 @@ export default function App() {
 
       <footer className="flex py-6 justify-center">
         Built by{' '}
-        <a href="https://pagey.dev" className="ml-1 text-blue-800 underline">
+        <a
+          href="https://www.linkedin.com/in/dan-page/"
+          target="_blank"
+          rel="noreferrer"
+          className="ml-1 text-blue-800 underline"
+        >
           Dan Page
         </a>
       </footer>
