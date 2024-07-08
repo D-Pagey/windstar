@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Mail } from 'lucide-react'
 import { WindControls } from './WindControls'
 import { HeadingIndicator } from './HeadingIndicator'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 
 export default function App() {
   const [windDirection, setWindDirection] = useState(270)
@@ -11,8 +11,8 @@ export default function App() {
   const feedbackEmail = import.meta.env.VITE_FEEDBACK_EMAIL
 
   return (
-    <div className="flex flex-col min-h-screen text-slate-800 bg-gradient-to-t from-blue-100 to-50%">
-      <header className="border p-4 shadow-sm flex justify-between items-center">
+    <div className="flex min-h-screen flex-col bg-gradient-to-t from-blue-100 to-50% text-slate-800">
+      <header className="flex items-center justify-between border p-4 shadow-sm">
         <p className="text-2xl">Windstar</p>
         <a
           href={`mailto:${feedbackEmail}?subject=Windstar Feedback`}
@@ -23,7 +23,7 @@ export default function App() {
       </header>
 
       <main
-        className="mx-auto grid w-full max-w-lg grow p-4 pb-24 lg:gap-y-12 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-6 lg:px-0"
+        className="mx-auto grid w-full max-w-lg grow p-4 pb-24 lg:max-w-4xl lg:grid-cols-2 lg:gap-x-6 lg:gap-y-12 lg:px-0"
         style={{ gridTemplateRows: 'max-content' }}
       >
         <div className="py-4 lg:col-span-2 lg:pb-0">
@@ -49,7 +49,7 @@ export default function App() {
         />
       </main>
 
-      <footer className="flex py-6 justify-center">
+      <footer className="flex justify-center py-6">
         Built by{' '}
         <a
           href="https://www.linkedin.com/in/dan-page/"
