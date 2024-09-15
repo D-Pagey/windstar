@@ -80,7 +80,14 @@ export const HeadingIndicator = ({
             faster: 'text-green-600'
           }
 
-          const direction = Math.round(trueCourse + correctionAngle)
+          const corrected = Math.round(trueCourse + correctionAngle)
+          const direction = corrected > 360 ? corrected - 360 : corrected
+          const formattedDirection =
+            direction < 10
+              ? `00${direction}`
+              : direction < 100
+                ? `0${direction}`
+                : direction
 
           return (
             <div
@@ -92,7 +99,7 @@ export const HeadingIndicator = ({
               key={trueCourse}
             >
               {!Number.isNaN(direction) && (
-                <p style={{ color: '#FF00FF' }}>{direction}°</p>
+                <p style={{ color: '#FF00FF' }}>{formattedDirection}°</p>
               )}
               <p
                 className={
